@@ -1,0 +1,5 @@
+local banlist = {}--Add the userids of the people you want to ban from your game.
+--Example: local banlist = {2603857418,8125014533}
+game.Players.PlayerAdded:Connect(function(plr)
+    if table.find(banlist,plr.UserId) then plr:Kick("You have been permanently banned. Reason:") end--Put your ban reason in-between ("")
+end) 
